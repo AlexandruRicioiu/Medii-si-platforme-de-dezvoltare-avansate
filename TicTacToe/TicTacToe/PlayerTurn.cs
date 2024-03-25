@@ -7,9 +7,8 @@ using System.Windows.Forms;
 
 namespace TicTacToe
 {
-    internal class PlaceGame
+    internal class PlayerTurn
     {
-        public int PlayerX, Player0;
         public bool Turn = true;
         Button[] button;
 
@@ -19,12 +18,14 @@ namespace TicTacToe
             if(Turn)
             {
                 button.Text = "X";
+                Turn = false;
             }
             else
             {
                 button.Text = "0";
+                Turn = true;
             }
-            Turn = false;
+            
         }
     }
 }

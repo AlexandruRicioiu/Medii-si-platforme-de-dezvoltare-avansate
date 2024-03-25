@@ -12,12 +12,14 @@ namespace TicTacToe
 {
     public partial class TicTacToe : Form
     {
-        private PlaceGame game;
+        private PlayerTurn game;
+        private GameLogic gameLogic;
 
         public TicTacToe()
         {
             InitializeComponent();
-            game = new PlaceGame();
+            game = new PlayerTurn();
+            gameLogic = new GameLogic();
         }
 
         private void button5_Click(object sender, EventArgs e)
