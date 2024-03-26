@@ -38,7 +38,7 @@
             this.box7 = new System.Windows.Forms.Button();
             this.box8 = new System.Windows.Forms.Button();
             this.box9 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.GameS = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // box1
@@ -131,22 +131,22 @@
             this.box9.UseVisualStyleBackColor = true;
             this.box9.Click += new System.EventHandler(this.box9_Click);
             // 
-            // label1
+            // GameS
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Jokerman", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(341, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 33);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Turn : ";
+            this.GameS.AutoSize = true;
+            this.GameS.Font = new System.Drawing.Font("Jokerman", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GameS.Location = new System.Drawing.Point(341, 25);
+            this.GameS.Name = "GameS";
+            this.GameS.Size = new System.Drawing.Size(90, 33);
+            this.GameS.TabIndex = 9;
+            this.GameS.Text = "Turn : ";
             // 
             // TicTacToe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.GameS);
             this.Controls.Add(this.box9);
             this.Controls.Add(this.box8);
             this.Controls.Add(this.box7);
@@ -175,7 +175,7 @@
         private System.Windows.Forms.Button box7;
         private System.Windows.Forms.Button box8;
         private System.Windows.Forms.Button box9;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label GameS;
     }
 }
 

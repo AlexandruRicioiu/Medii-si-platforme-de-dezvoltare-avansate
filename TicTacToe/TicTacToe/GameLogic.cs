@@ -9,40 +9,66 @@ namespace TicTacToe
 {
     internal class GameLogic : PlayerTurn 
     {
-        public int PlayerX, Player0;
         Button[] button;
         Label label;
 
-
-        GameLogic()
+        public GameLogic(Button[] button, Label label)
         {
-            if (button[1].Text == button[2].Text && button[2].Text == button[3].Text) 
-            {
-                Console.WriteLine("A castigat x");
-            }
-            else if(button[4].Text == button[5].Text && button[5].Text == button[6].Text)
-            {
+            this.button = button;
+            this.label = label;
+        }
 
-            }
-            else if(button[7].Text == button[8].Text && button[8].Text == button[9].Text) 
-            {
+        public void CheckWinner()
+        {
+            int buttonsWithText = 0;
 
-            }
-            else if(button[1].Text == button[5].Text && button[5].Text == button[9].Text)
+            if (button[0].Text == button[1].Text && button[1].Text == button[2].Text)
             {
-
+                label.Text = "The winner is: " + button[0].Text;
             }
-            else if(button[3].Text == button[5].Text && button[5].Text == button[7].Text)
+            else if (button[3].Text == button[4].Text && button[4].Text == button[5].Text)
             {
-
+                label.Text = "The winner is: " + button[3].Text;
+            }
+            else if (button[6].Text == button[7].Text && button[7].Text == button[8].Text)
+            {
+                label.Text = "The winner is: " + button[6].Text;
+            }
+            else if (button[0].Text == button[3].Text && button[3].Text == button[6].Text)
+            {
+                label.Text = "The winner is: " + button[0].Text;
+            }
+            else if (button[1].Text == button[4].Text && button[4].Text == button[7].Text)
+            {
+                label.Text = "The winner is: " + button[1].Text;
+            }
+            else if (button[2].Text == button[5].Text && button[5].Text == button[8].Text)
+            {
+                label.Text = "The winner is: " + button[2].Text;
+            }
+            else if (button[0].Text == button[4].Text && button[4].Text == button[8].Text)
+            {
+                label.Text = "The winner is: " + button[0].Text;
+            }
+            else if (button[2].Text == button[4].Text && button[4].Text == button[6].Text)
+            {
+                label.Text = "The winner is: " + button[2].Text;
             }
             else
             {
+                foreach (Button btn in button)
+                {
+                    if (!string.IsNullOrEmpty(btn.Text)) 
+                    {
+                        buttonsWithText++;
+                    }
+                }
 
+                if (buttonsWithText == 9)
+                {
+                    label.Text = "Draw";
+                }
             }
-         
         }
-
-
     }
 }
