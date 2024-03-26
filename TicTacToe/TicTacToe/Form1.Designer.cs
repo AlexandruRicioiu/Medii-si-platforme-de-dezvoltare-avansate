@@ -38,7 +38,8 @@
             this.box7 = new System.Windows.Forms.Button();
             this.box8 = new System.Windows.Forms.Button();
             this.box9 = new System.Windows.Forms.Button();
-            this.GameS = new System.Windows.Forms.Label();
+            this.Turn = new System.Windows.Forms.Label();
+            this.Winner = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // box1
@@ -131,22 +132,33 @@
             this.box9.UseVisualStyleBackColor = true;
             this.box9.Click += new System.EventHandler(this.box9_Click);
             // 
-            // GameS
+            // Turn
             // 
-            this.GameS.AutoSize = true;
-            this.GameS.Font = new System.Drawing.Font("Jokerman", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GameS.Location = new System.Drawing.Point(341, 25);
-            this.GameS.Name = "GameS";
-            this.GameS.Size = new System.Drawing.Size(90, 33);
-            this.GameS.TabIndex = 9;
-            this.GameS.Text = "Turn : ";
+            this.Turn.AutoSize = true;
+            this.Turn.Font = new System.Drawing.Font("Jokerman", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Turn.Location = new System.Drawing.Point(341, 408);
+            this.Turn.Name = "Turn";
+            this.Turn.Size = new System.Drawing.Size(84, 33);
+            this.Turn.TabIndex = 9;
+            this.Turn.Text = "Turn: ";
+            // 
+            // Winner
+            // 
+            this.Winner.AutoSize = true;
+            this.Winner.Font = new System.Drawing.Font("Jokerman", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Winner.Location = new System.Drawing.Point(312, 20);
+            this.Winner.Name = "Winner";
+            this.Winner.Size = new System.Drawing.Size(174, 33);
+            this.Winner.TabIndex = 10;
+            this.Winner.Text = "The winner is:";
             // 
             // TicTacToe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.GameS);
+            this.Controls.Add(this.Winner);
+            this.Controls.Add(this.Turn);
             this.Controls.Add(this.box9);
             this.Controls.Add(this.box8);
             this.Controls.Add(this.box7);
@@ -175,7 +187,8 @@
         private System.Windows.Forms.Button box7;
         private System.Windows.Forms.Button box8;
         private System.Windows.Forms.Button box9;
-        private System.Windows.Forms.Label GameS;
+        private System.Windows.Forms.Label Turn;
+        private System.Windows.Forms.Label Winner;
     }
 }
 

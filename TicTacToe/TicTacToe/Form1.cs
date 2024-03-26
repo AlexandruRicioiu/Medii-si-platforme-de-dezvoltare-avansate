@@ -19,7 +19,7 @@ namespace TicTacToe
         {
             InitializeComponent();
             game = new PlayerTurn();
-            gameLogic = new GameLogic(new Button[9] {box1, box2, box3, box4, box5, box6, box7, box8, box9,}, GameS);
+            gameLogic = new GameLogic(new Button[9] {box1, box2, box3, box4, box5, box6, box7, box8, box9,}, Winner);
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -27,7 +27,7 @@ namespace TicTacToe
             Button clickedBtn = (Button)sender;
             if (clickedBtn != null && clickedBtn.Text == "")
             {
-                game.SelectPlayer(clickedBtn);
+                game.SelectPlayer(clickedBtn, Turn);
                 gameLogic.CheckWinner();
             }
         }
@@ -37,7 +37,7 @@ namespace TicTacToe
             Button clickedBtn = (Button)sender;
             if(clickedBtn != null && clickedBtn.Text == "")
             {
-                game.SelectPlayer(clickedBtn);
+                game.SelectPlayer(clickedBtn, Turn);
                 gameLogic.CheckWinner();
             }
         }
@@ -47,7 +47,7 @@ namespace TicTacToe
             Button clickedBtn = (Button)sender;
             if (clickedBtn != null && clickedBtn.Text == "")
             {
-                game.SelectPlayer(clickedBtn);
+                game.SelectPlayer(clickedBtn, Turn);
                 gameLogic.CheckWinner();
             }
         }
@@ -57,7 +57,7 @@ namespace TicTacToe
             Button clickedBtn = (Button)sender;
             if (clickedBtn != null && clickedBtn.Text == "")
             {
-                game.SelectPlayer(clickedBtn);
+                game.SelectPlayer(clickedBtn, Turn);
                 gameLogic.CheckWinner();
             }
         }
@@ -67,7 +67,7 @@ namespace TicTacToe
             Button clickedBtn = (Button)sender;
             if (clickedBtn != null && clickedBtn.Text == "")
             {
-                game.SelectPlayer(clickedBtn);
+                game.SelectPlayer(clickedBtn, Turn);
                 gameLogic.CheckWinner();
             }
         }
@@ -77,7 +77,7 @@ namespace TicTacToe
             Button clickedBtn = (Button)sender;
             if (clickedBtn != null && clickedBtn.Text == "")
             {
-                game.SelectPlayer(clickedBtn);
+                game.SelectPlayer(clickedBtn, Turn);
                 gameLogic.CheckWinner();
             }
         }
@@ -87,7 +87,7 @@ namespace TicTacToe
             Button clickedBtn = (Button)sender;
             if (clickedBtn != null && clickedBtn.Text == "")
             {
-                game.SelectPlayer(clickedBtn);
+                game.SelectPlayer(clickedBtn, Turn);
                 gameLogic.CheckWinner();
             }
         }
@@ -97,7 +97,7 @@ namespace TicTacToe
             Button clickedBtn = (Button)sender;
             if (clickedBtn != null && clickedBtn.Text == "")
             {
-                game.SelectPlayer(clickedBtn);
+                game.SelectPlayer(clickedBtn, Turn);
                 gameLogic.CheckWinner();
             }
         }
@@ -107,7 +107,7 @@ namespace TicTacToe
             Button clickedBtn = (Button)sender;
             if (clickedBtn != null && clickedBtn.Text == "")
             {
-                game.SelectPlayer(clickedBtn);
+                game.SelectPlayer(clickedBtn, Turn);
                 gameLogic.CheckWinner();
             }
         }
