@@ -1,34 +1,67 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TicTacToe
 {
+    public interface Observer
+    {
+        void Update(bool turn, string playerName);
+    }
+
     internal class PlayerTurn
     {
-        public string PlayerX, Player0;
-        public bool Turn = true;
-        Button[] button;
+        private List<Observer> observers = new List<Observer>();
+        public bool Turn { get; private set; } = true;
+        public string PlayerX { get; set; } = "Player X";
+        public string Player0 { get; set; } = "Player 0";
 
-
-        public void SelectPlayer(Button button, Label name)
+        public void RegisterObserver(Observer observer)
         {
-            if(Turn)
+            observers.Add(observer);
+        }
+
+        public void RemoveObserver(Observer observer)
+        {
+            observers.Remove(observer);
+        }
+
+        public void SelectPlayer(Button button)
+        {
+            if (Turn)
             {
                 button.Text = "X";
-                name.Text = "Turn: Player 0";
+                NotifyObservers(Player0);
                 Turn = false;
             }
             else
             {
                 button.Text = "0";
+                NotifyObservers(PlayerX);
                 Turn = true;
-                name.Text = "Turn: Player X";
             }
-            
+            NotifyTurnLabel();
         }
+
+
+        private void NotifyTurnLabel()
+        {
+            foreach (var observer in observers)
+            {
+                if (observer is Observer)
+                {
+                    observer.Update(Turn, Turn ? PlayerX : Player0);
+                }
+            }
+        }
+
+        private void NotifyObservers(string playerName)
+        {
+            foreach (var observer in observers)
+            {
+                observer.Update(Turn, playerName);
+            }
+        }
+
     }
 }

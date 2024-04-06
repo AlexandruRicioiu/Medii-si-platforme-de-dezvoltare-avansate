@@ -1,27 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace TicTacToe
 {
-    internal class GameLogic : PlayerTurn 
+    public interface WinnerCheckingStrategy
     {
-        Button[] button;
-        Label label;
+        void CheckWinner(Button[] buttons, Label label);
+    }
 
-        public GameLogic(Button[] button, Label label)
+    public class ThreeInARowStrategy : WinnerCheckingStrategy
+    {
+        public void CheckWinner(Button[] button, Label label)
         {
-            this.button = button;
-            this.label = label;
-        }
-
-        public void CheckWinner()
-        {
-            int buttonsWithText = 0;
-
             if (button[0].Text == button[1].Text && button[1].Text == button[2].Text)
             {
                 label.Text = "The winner is: " + button[0].Text;
@@ -46,7 +35,14 @@ namespace TicTacToe
             {
                 label.Text = "The winner is: " + button[2].Text;
             }
-            else if (button[0].Text == button[4].Text && button[4].Text == button[8].Text)
+        }
+    }
+
+    public class DiagonalStrategy : WinnerCheckingStrategy
+    {
+        public void CheckWinner(Button[] button, Label label)
+        {
+             if (button[0].Text == button[4].Text && button[4].Text == button[8].Text)
             {
                 label.Text = "The winner is: " + button[0].Text;
             }
@@ -54,21 +50,27 @@ namespace TicTacToe
             {
                 label.Text = "The winner is: " + button[2].Text;
             }
-            else
-            {
-                foreach (Button btn in button)
-                {
-                    if (!string.IsNullOrEmpty(btn.Text)) 
-                    {
-                        buttonsWithText++;
-                    }
-                }
-
-                if (buttonsWithText == 9)
-                {
-                    label.Text = "Draw";
-                }
-            }
         }
     }
+
+    public class GameLogic
+    {
+        private WinnerCheckingStrategy _threeInARowStrategy;
+        private WinnerCheckingStrategy _diagonalStrategy;
+
+        public GameLogic(WinnerCheckingStrategy threeInARowStrategy, WinnerCheckingStrategy diagonalStrategy)
+        {
+            _threeInARowStrategy = threeInARowStrategy;
+            _diagonalStrategy = diagonalStrategy;
+        }
+
+        public void CheckWinner(Button[] buttons, Label label)
+        {
+            _threeInARowStrategy.CheckWinner(buttons, label);
+            _diagonalStrategy.CheckWinner(buttons, label);
+        }
+    }
+
+
 }
+
