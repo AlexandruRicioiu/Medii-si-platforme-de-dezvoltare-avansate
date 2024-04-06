@@ -23,6 +23,7 @@ namespace TicTacToe
             game = new PlayerTurn();
             game.RegisterObserver(this);
             gameLogic = new GameLogic(new ThreeInARowStrategy(), new DiagonalStrategy());
+            RestartGame.Instance.GameReset += HandleGameReset;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -112,6 +113,15 @@ namespace TicTacToe
             {
                 game.SelectPlayer(clickedBtn);
                 gameLogic.CheckWinner(buttons, Winner);
+            }
+        }
+
+        private void HandleGameReset(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Do you want to reset the game?", "Reset Game", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                RestartGame.Instance.ResetGame();
             }
         }
 
