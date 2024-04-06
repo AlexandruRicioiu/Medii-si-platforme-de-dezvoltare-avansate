@@ -37,7 +37,6 @@ namespace TicTacToe
             }
         }
     }
-
     public class DiagonalStrategy : WinnerCheckingStrategy
     {
         public void CheckWinner(Button[] button, Label label)
@@ -70,7 +69,5 @@ namespace TicTacToe
             _diagonalStrategy.CheckWinner(buttons, label);
         }
     }
-
-
 }
 
