@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace TicTacToe
 {
@@ -54,20 +55,32 @@ namespace TicTacToe
 
     public class GameLogic
     {
-        private WinnerCheckingStrategy _threeInARowStrategy;
-        private WinnerCheckingStrategy _diagonalStrategy;
-
-        public GameLogic(WinnerCheckingStrategy threeInARowStrategy, WinnerCheckingStrategy diagonalStrategy)
-        {
-            _threeInARowStrategy = threeInARowStrategy;
-            _diagonalStrategy = diagonalStrategy;
-        }
-
-        public void CheckWinner(Button[] buttons, Label label)
-        {
-            _threeInARowStrategy.CheckWinner(buttons, label);
-            _diagonalStrategy.CheckWinner(buttons, label);
-        }
+         private WinnerCheckingStrategy _threeInARowStrategy;
+         private WinnerCheckingStrategy _diagonalStrategy;
+    
+         public event EventHandler GameWon;
+    
+         public GameLogic(WinnerCheckingStrategy threeInARowStrategy, WinnerCheckingStrategy diagonalStrategy)
+         {
+             _threeInARowStrategy = threeInARowStrategy;
+             _diagonalStrategy = diagonalStrategy;
+         }
+    
+         public void CheckWinner(Button[] buttons, Label label)
+         {
+             _threeInARowStrategy.CheckWinner(buttons, label);
+             _diagonalStrategy.CheckWinner(buttons, label);
+    
+             if (label.Text=="The winner is: X" || label.Text == "The winner is: 0")
+             {
+                 OnGameWon();
+             }
+         }
+    
+         protected virtual void OnGameWon()
+         {
+             GameWon?.Invoke(this, EventArgs.Empty);
+         }
     }
 }
 

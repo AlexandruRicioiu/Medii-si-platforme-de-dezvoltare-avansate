@@ -50,7 +50,7 @@
             this.box1.Size = new System.Drawing.Size(100, 100);
             this.box1.TabIndex = 0;
             this.box1.UseVisualStyleBackColor = true;
-            this.box1.Click += new System.EventHandler(this.box1_Click);
+
             // 
             // box2
             // 
@@ -60,7 +60,6 @@
             this.box2.Size = new System.Drawing.Size(100, 100);
             this.box2.TabIndex = 1;
             this.box2.UseVisualStyleBackColor = true;
-            this.box2.Click += new System.EventHandler(this.box2_Click);
             // 
             // box3
             // 
@@ -70,7 +69,6 @@
             this.box3.Size = new System.Drawing.Size(100, 100);
             this.box3.TabIndex = 2;
             this.box3.UseVisualStyleBackColor = true;
-            this.box3.Click += new System.EventHandler(this.box3_Click);
             // 
             // box4
             // 
@@ -80,7 +78,6 @@
             this.box4.Size = new System.Drawing.Size(100, 100);
             this.box4.TabIndex = 3;
             this.box4.UseVisualStyleBackColor = true;
-            this.box4.Click += new System.EventHandler(this.box4_Click);
             // 
             // box5
             // 
@@ -90,7 +87,6 @@
             this.box5.Size = new System.Drawing.Size(100, 100);
             this.box5.TabIndex = 4;
             this.box5.UseVisualStyleBackColor = true;
-            this.box5.Click += new System.EventHandler(this.button5_Click);
             // 
             // box6
             // 
@@ -100,7 +96,6 @@
             this.box6.Size = new System.Drawing.Size(100, 100);
             this.box6.TabIndex = 5;
             this.box6.UseVisualStyleBackColor = true;
-            this.box6.Click += new System.EventHandler(this.box6_Click);
             // 
             // box7
             // 
@@ -110,7 +105,6 @@
             this.box7.Size = new System.Drawing.Size(100, 100);
             this.box7.TabIndex = 6;
             this.box7.UseVisualStyleBackColor = true;
-            this.box7.Click += new System.EventHandler(this.box7_Click);
             // 
             // box8
             // 
@@ -120,7 +114,6 @@
             this.box8.Size = new System.Drawing.Size(100, 100);
             this.box8.TabIndex = 7;
             this.box8.UseVisualStyleBackColor = true;
-            this.box8.Click += new System.EventHandler(this.box8_Click);
             // 
             // box9
             // 
@@ -130,7 +123,6 @@
             this.box9.Size = new System.Drawing.Size(100, 100);
             this.box9.TabIndex = 8;
             this.box9.UseVisualStyleBackColor = true;
-            this.box9.Click += new System.EventHandler(this.box9_Click);
             // 
             // Turn
             // 

@@ -23,10 +23,15 @@ namespace TicTacToe
             game = new PlayerTurn();
             game.RegisterObserver(this);
             gameLogic = new GameLogic(new ThreeInARowStrategy(), new DiagonalStrategy());
-            RestartGame.Instance.GameReset += HandleGameReset;
+            gameLogic.GameWon += HandleGameWon;
+
+            foreach (Button button in buttons)
+            {
+                button.Click += Button_Click;
+            }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void Button_Click(object sender, EventArgs e)
         {
             Button clickedBtn = (Button)sender;
             if (clickedBtn != null && clickedBtn.Text == "")
@@ -36,92 +41,17 @@ namespace TicTacToe
             }
         }
 
-        private void box1_Click(object sender, EventArgs e)
+        private void HandleGameWon(object sender, EventArgs e)
         {
-            Button clickedBtn = (Button)sender;
-            if (clickedBtn != null && clickedBtn.Text == "")
-            {
-                game.SelectPlayer(clickedBtn);
-                gameLogic.CheckWinner(buttons, Winner);
-            }
-        }
-
-        private void box2_Click(object sender, EventArgs e)
-        {
-            Button clickedBtn = (Button)sender;
-            if (clickedBtn != null && clickedBtn.Text == "")
-            {
-                game.SelectPlayer(clickedBtn);
-                gameLogic.CheckWinner(buttons, Winner);
-            }
-        }
-
-        private void box3_Click(object sender, EventArgs e)
-        {
-            Button clickedBtn = (Button)sender;
-            if (clickedBtn != null && clickedBtn.Text == "")
-            {
-                game.SelectPlayer(clickedBtn);
-                gameLogic.CheckWinner(buttons, Winner);
-            }
-        }
-
-        private void box4_Click(object sender, EventArgs e)
-        {
-            Button clickedBtn = (Button)sender;
-            if (clickedBtn != null && clickedBtn.Text == "")
-            {
-                game.SelectPlayer(clickedBtn);
-                gameLogic.CheckWinner(buttons, Winner);
-            }
-        }
-
-        private void box6_Click(object sender, EventArgs e)
-        {
-            Button clickedBtn = (Button)sender;
-            if (clickedBtn != null && clickedBtn.Text == "")
-            {
-                game.SelectPlayer(clickedBtn);
-                gameLogic.CheckWinner(buttons, Winner);
-            }
-        }
-
-        private void box7_Click(object sender, EventArgs e)
-        {
-            Button clickedBtn = (Button)sender;
-            if (clickedBtn != null && clickedBtn.Text == "")
-            {
-                game.SelectPlayer(clickedBtn);
-                gameLogic.CheckWinner(buttons, Winner);
-            }
-        }
-
-        private void box8_Click(object sender, EventArgs e)
-        {
-            Button clickedBtn = (Button)sender;
-            if (clickedBtn != null && clickedBtn.Text == "")
-            {
-                game.SelectPlayer(clickedBtn);
-                gameLogic.CheckWinner(buttons, Winner);
-            }
-        }
-
-        private void box9_Click(object sender, EventArgs e)
-        {
-            Button clickedBtn = (Button)sender;
-            if (clickedBtn != null && clickedBtn.Text == "")
-            {
-                game.SelectPlayer(clickedBtn);
-                gameLogic.CheckWinner(buttons, Winner);
-            }
-        }
-
-        private void HandleGameReset(object sender, EventArgs e)
-        {
-            var result = MessageBox.Show("Do you want to reset the game?", "Reset Game", MessageBoxButtons.YesNo);
+            var result = MessageBox.Show("Do you want to reset the game?", "Game Won", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                RestartGame.Instance.ResetGame();
+                foreach (Button button in buttons)
+                {
+                    button.Text = "";
+                }
+
+                Winner.Text = "";
             }
         }
 
