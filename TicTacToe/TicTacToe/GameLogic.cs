@@ -58,28 +58,44 @@ namespace TicTacToe
          private WinnerCheckingStrategy _threeInARowStrategy;
          private WinnerCheckingStrategy _diagonalStrategy;
     
-         public event EventHandler GameWon;
+         public event EventHandler GameFinish;
     
          public GameLogic(WinnerCheckingStrategy threeInARowStrategy, WinnerCheckingStrategy diagonalStrategy)
          {
              _threeInARowStrategy = threeInARowStrategy;
              _diagonalStrategy = diagonalStrategy;
          }
-    
-         public void CheckWinner(Button[] buttons, Label label)
+
+        public void CheckWinner(Button[] buttons, Label label)
+        {
+            _threeInARowStrategy.CheckWinner(buttons, label);
+            _diagonalStrategy.CheckWinner(buttons, label);
+
+            bool allButtonsClicked = true;
+            foreach (Button button in buttons)
+            {
+                if (button.Text == "")
+                {
+                    allButtonsClicked = false;
+                    break;
+                }
+            }
+
+            if (allButtonsClicked && label.Text != "The winner is: X" && label.Text != "The winner is: 0")
+            {
+                label.Text = "It's a tie!";
+                GameIsFinish();
+            }
+            else if (label.Text == "The winner is: X" || label.Text == "The winner is: 0")
+            {
+                GameIsFinish();
+            }
+        }
+
+
+        protected virtual void GameIsFinish()
          {
-             _threeInARowStrategy.CheckWinner(buttons, label);
-             _diagonalStrategy.CheckWinner(buttons, label);
-    
-             if (label.Text=="The winner is: X" || label.Text == "The winner is: 0")
-             {
-                 OnGameWon();
-             }
-         }
-    
-         protected virtual void OnGameWon()
-         {
-             GameWon?.Invoke(this, EventArgs.Empty);
+             GameFinish?.Invoke(this, EventArgs.Empty);
          }
     }
 }

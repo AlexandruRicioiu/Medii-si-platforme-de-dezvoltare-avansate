@@ -23,7 +23,7 @@ namespace TicTacToe
             game = new PlayerTurn();
             game.RegisterObserver(this);
             gameLogic = new GameLogic(new ThreeInARowStrategy(), new DiagonalStrategy());
-            gameLogic.GameWon += HandleGameWon;
+            gameLogic.GameFinish += HandleGameFinish;
 
             foreach (Button button in buttons)
             {
@@ -41,9 +41,9 @@ namespace TicTacToe
             }
         }
 
-        private void HandleGameWon(object sender, EventArgs e)
+        private void HandleGameFinish(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Do you want to reset the game?", "Game Won", MessageBoxButtons.YesNo);
+            var result = MessageBox.Show("Do you want to reset the game?", "Game Finish", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 foreach (Button button in buttons)

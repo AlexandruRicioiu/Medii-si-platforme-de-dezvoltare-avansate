@@ -50,7 +50,6 @@
             this.box1.Size = new System.Drawing.Size(100, 100);
             this.box1.TabIndex = 0;
             this.box1.UseVisualStyleBackColor = true;
-
             // 
             // box2
             // 
@@ -128,11 +127,11 @@
             // 
             this.Turn.AutoSize = true;
             this.Turn.Font = new System.Drawing.Font("Jokerman", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Turn.Location = new System.Drawing.Point(341, 408);
+            this.Turn.Location = new System.Drawing.Point(295, 408);
             this.Turn.Name = "Turn";
-            this.Turn.Size = new System.Drawing.Size(84, 33);
+            this.Turn.Size = new System.Drawing.Size(191, 33);
             this.Turn.TabIndex = 9;
-            this.Turn.Text = "Turn: ";
+            this.Turn.Text = "Turn:  Player X";
             // 
             // Winner
             // 
