@@ -1,1 +1,1 @@
-Folder for all project 
+Pentru acest joc de X si 0 am folosit doua design patern-uri, acestea fiind observation si strategy. Strategy a fost folosit pentru a crea logica jocului, iar observation pentru a seta tura jucatorului. Ca metoda de test am folosit ut in care am adaugat 11 testcase-uri, 8 dintre ele fiind pentru a verifica daca unul dintre jucatori a castigat in de linie, coloana sau verticala si 3 dintre ele sunt create pentru a testa egalitatea dintre jucatori.
