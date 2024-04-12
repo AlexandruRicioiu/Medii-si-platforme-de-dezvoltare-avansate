@@ -9,14 +9,19 @@ namespace Animal_Project
 {
     internal class AnimalS
     {
-        string[] animals = { "pig", "hen", "dog", "cat"};
-        string[] sounds = {"groh", "piu", "ham", "miua" };
+        private Dictionary<string, string> animalSounds = new Dictionary<string, string>
+        {
+            { "pig", "groh" },
+            { "hen", "piu" },
+            { "dog", "ham" },
+            { "cat", "miua" }
+        };
 
         public void AnimalSound()
         {
-            for (int i = 0; i < animals.Length; i++)
+            foreach (var animalSound in animalSounds)
             {
-                Console.WriteLine( animals[i] + " makes sound " + sounds[i] + " " + sounds[i]);
+                Console.WriteLine($"{animalSound.Key} makes sound {animalSound.Value}");
             }
         }
     }

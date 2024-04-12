@@ -5,3 +5,10 @@ D:\MediiProgramare\Animal Project\Animal Project\obj\Debug\Animal Project.csproj
 D:\MediiProgramare\Animal Project\Animal Project\obj\Debug\Animal Project.csproj.CoreCompileInputs.cache
 D:\MediiProgramare\Animal Project\Animal Project\obj\Debug\Animal Project.exe
 D:\MediiProgramare\Animal Project\Animal Project\obj\Debug\Animal Project.pdb
+F:\Medii-si-platforme-de-dezvoltare-avansate\Animal Project\Animal Project\bin\Debug\Animal Project.exe.config
+F:\Medii-si-platforme-de-dezvoltare-avansate\Animal Project\Animal Project\bin\Debug\Animal Project.exe
+F:\Medii-si-platforme-de-dezvoltare-avansate\Animal Project\Animal Project\bin\Debug\Animal Project.pdb
+F:\Medii-si-platforme-de-dezvoltare-avansate\Animal Project\Animal Project\obj\Debug\Animal Project.csproj.AssemblyReference.cache
+F:\Medii-si-platforme-de-dezvoltare-avansate\Animal Project\Animal Project\obj\Debug\Animal Project.csproj.CoreCompileInputs.cache
+F:\Medii-si-platforme-de-dezvoltare-avansate\Animal Project\Animal Project\obj\Debug\Animal Project.exe
+F:\Medii-si-platforme-de-dezvoltare-avansate\Animal Project\Animal Project\obj\Debug\Animal Project.pdb
