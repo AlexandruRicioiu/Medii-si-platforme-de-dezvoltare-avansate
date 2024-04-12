@@ -1,0 +1,17 @@
+F:\Medii-si-platforme-de-dezvoltare-avansate\Test_TicTacToe\Test_TicTacToe\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+F:\Medii-si-platforme-de-dezvoltare-avansate\Test_TicTacToe\Test_TicTacToe\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+F:\Medii-si-platforme-de-dezvoltare-avansate\Test_TicTacToe\Test_TicTacToe\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+F:\Medii-si-platforme-de-dezvoltare-avansate\Test_TicTacToe\Test_TicTacToe\bin\Debug\Microsoft.TestPlatform.AdapterUtilities.dll
+F:\Medii-si-platforme-de-dezvoltare-avansate\Test_TicTacToe\Test_TicTacToe\bin\Debug\Test_TicTacToe.dll
+F:\Medii-si-platforme-de-dezvoltare-avansate\Test_TicTacToe\Test_TicTacToe\bin\Debug\Test_TicTacToe.pdb
+F:\Medii-si-platforme-de-dezvoltare-avansate\Test_TicTacToe\Test_TicTacToe\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+F:\Medii-si-platforme-de-dezvoltare-avansate\Test_TicTacToe\Test_TicTacToe\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+F:\Medii-si-platforme-de-dezvoltare-avansate\Test_TicTacToe\Test_TicTacToe\bin\Debug\TicTacToe.exe
+F:\Medii-si-platforme-de-dezvoltare-avansate\Test_TicTacToe\Test_TicTacToe\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+F:\Medii-si-platforme-de-dezvoltare-avansate\Test_TicTacToe\Test_TicTacToe\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+F:\Medii-si-platforme-de-dezvoltare-avansate\Test_TicTacToe\Test_TicTacToe\bin\Debug\TicTacToe.pdb
+F:\Medii-si-platforme-de-dezvoltare-avansate\Test_TicTacToe\Test_TicTacToe\obj\Debug\Test_TicTacToe.csproj.AssemblyReference.cache
+F:\Medii-si-platforme-de-dezvoltare-avansate\Test_TicTacToe\Test_TicTacToe\obj\Debug\Test_TicTacToe.csproj.CoreCompileInputs.cache
+F:\Medii-si-platforme-de-dezvoltare-avansate\Test_TicTacToe\Test_TicTacToe\obj\Debug\Test_TicTacToe.csproj.CopyComplete
+F:\Medii-si-platforme-de-dezvoltare-avansate\Test_TicTacToe\Test_TicTacToe\obj\Debug\Test_TicTacToe.dll
+F:\Medii-si-platforme-de-dezvoltare-avansate\Test_TicTacToe\Test_TicTacToe\obj\Debug\Test_TicTacToe.pdb
