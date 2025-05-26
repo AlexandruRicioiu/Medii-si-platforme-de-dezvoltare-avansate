@@ -1,0 +1,30 @@
+name: CI Buil and Test
+
+on:
+  push:
+    branches: [ main ]  # Sau branch-ul tău principal
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build_and_test:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup MSBuild path
+      uses: microsoft/setup-msbuild@v1.1
+
+    - name: Build solution
+      run: msbuild TicTacToe.sln /p:Configuration=Debug
+
+    - name: Run unit tests
+      run: |
+        "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe" .\TicTacToe\bin\Debug\TicTacToe.Tests.dll
+
+    - name: Deployment step - copy build files
+      run: |
+        mkdir deploy
+        xcopy /E /I /Y .\TicTacToe\bin\Debug\* deploy\
