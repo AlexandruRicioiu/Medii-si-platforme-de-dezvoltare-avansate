@@ -2,7 +2,7 @@ name: CI Buil and Test
 
 on:
   push:
-    branches: [ main ]  # Sau branch-ul tău principal
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 
